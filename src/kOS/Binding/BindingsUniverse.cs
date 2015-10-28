@@ -131,7 +131,8 @@ namespace kOS.Binding
             }
 
             shared.BindingMgr.AddGetter("VERSION", () => Core.VersionInfo);
-            shared.BindingMgr.AddGetter("REFERENCEVECTOR", () => new Vector(Planetarium.right));
+
+            shared.BindingMgr.AddGetter(new [] { "UNIVERSALPRIMEMERIDIAN", "UPM" }, () => new Vector(Planetarium.right));
         }
 
         private static void SetWarpRate(int newRate, int maxRate)

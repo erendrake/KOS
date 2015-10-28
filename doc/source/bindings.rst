@@ -359,9 +359,9 @@ But kOS does not support this at the moment so in kOS if you set
 the LOADDISTANCE, you are setting it to the same value
 universally for all situations.
 
-.. _referencevector:
+.. _universalprimemeridian:
 
-REFERENCEVECTOR
+UNIVERSALPRIMEMERIDIAN (UPM)
 ---------------
 
 Gives the Reference :struct:`Vector` for the Solar System itself, in
@@ -371,10 +371,12 @@ Both the :attr:`Orbit:LONGITUDEOFASCENDINGNODE` orbit suffix and the
 :attr:`Body:ROTATIONANGLE` body suffix are expressed in terms of
 degree offsets from this *Universal Reference Vector*.
 
-What is the Reference Vector?
+There is an available synonym UPM
+
+What is the Universal Prime Meridian?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The reference vector is an arbitrary vector in space used to measure
+The Universal Prime Meridian is an arbitrary vector in space used to measure
 some orbital parameters that are supposed to remain fixed to space
 regardless of how the planets underneath the orbit rotate, or where the
 Sun is.  In a sense it can be thought of as the celestial "prime
@@ -385,7 +387,7 @@ In a hypothetical Earthling's solar system our Kerbal scientists have
 hypothesized may exist in a galaxy far away, Earthbound astronomers use
 a reference they called the
 `First Point of Aries <https://en.wikipedia.org/wiki/First_Point_of_Aries>`__,
-as their reference vector.
+as their Universal Prime Meridian.
 
 For Kerbals, it refers to a more arbitrary line in space, pointing at a fixed
 point in the firmament, also known as the "skybox".

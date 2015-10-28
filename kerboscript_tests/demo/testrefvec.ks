@@ -9,7 +9,7 @@ print "press action group 1 to quit.".
 
 set refdraw to vecdraw().
 set refdraw:color to white.
-set refdraw:label to "ReferenceVector".
+set refdraw:label to "UniversalPrimeMeridian".
 set refdraw:show to true.
 set zerodraw to vecdraw().
 set zerodraw:color to yellow.
@@ -19,7 +19,7 @@ set zerodraw:show to true.
 until ag1 {
   set refdraw:start  to ship:body:position.
   set zerodraw:start to ship:body:position.
-  set refdraw:vec  to 2500000*ReferenceVector.
+  set refdraw:vec  to 2500000*UPM. //UPM is synomym for UNIVERSALPRIMEMERIDIAN
   set zerodraw:vec to 4*(latlng(0,0):position - ship:body:position).
   print ship:body:name + 
         ":ROTATIONANGLE = " + 
