@@ -1,7 +1,6 @@
 ﻿using System;
 using kOS.Safe;
 using System.Collections.Generic;
-using kOS.Suffixed;
 using kOS.Safe.Exceptions;
 using kOS.Safe.Utilities;
 
@@ -47,18 +46,18 @@ namespace kOS
                 message += ((KOSException)e).VerboseMessage;
                 
                 // Fallback if there was no verbose message defined:
-                if (message == String.Empty)
+                if (message == string.Empty)
                     message += e.Message;
                 message += LINE_RULE;
                 
                 // Take on the URL if there is one:
                 string url = ((KOSException)e).HelpURL;
-                if (url != String.Empty)
+                if (url != string.Empty)
                     message += "\n\nMore Information at:\n" + url + "\n";
                 message += LINE_RULE;
             }
 
-            if (SafeHouse.Config.AudibleExceptions && e is KOSException)
+            if (SafeHouse.Config.AudibleExceptions)
                 Shared.SoundMaker.BeginSound("error");
 
             LogToScreen(message);
